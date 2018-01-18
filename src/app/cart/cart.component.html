@@ -1,0 +1,22 @@
+<div class="cart" [ngClass]="{'toggled':isToggled}">
+  <span class="toggle-btn" (click)="toggle()">Cart</span>
+  <div class="cart-item-wrapper">
+    <div class="ui form">
+      <div class="field">
+        <label>Address</label>
+        <input type="text" [(ngModel)]="name" name="name" placeholder="address">
+      </div>
+    </div>
+    <app-cart-item *ngFor="let cartItem of cartItems" [cartItem]="cartItem"></app-cart-item>
+  </div>
+  <div class="cart-foot">
+    <label class="cart-text">Total：</label>
+    <label class="cart-money">￥{{totalPrice.total}}</label>
+    <div class="ui fluid green hirizontal animated button add-order" tabindex="0" (click)="newOrder()">
+      <div class="hidden content">BUY</div>
+      <div class="visible content">
+        <i class="add icon"></i>
+      </div>
+    </div>
+  </div>
+</div>

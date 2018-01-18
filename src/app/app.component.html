@@ -1,0 +1,26 @@
+<sm-menu title="EasyBuy" class="top fixed inverted teal">
+  <a sm-item href="#commodities">List</a>
+  <a sm-item href="#orders">Order</a>
+
+  <sm-menu class="menu right secondary">
+      <a sm-item href="#" (click)="showSignin()">
+        <span *ngIf="phone.length == 0"><i class="large user icon"></i>Signin</span>
+        <span *ngIf="phone.length > 0"><i class="large user icon"></i>{{phone}}</span>
+      </a>
+  </sm-menu>
+</sm-menu>
+
+<img class="ui fluid image" src="../assets/images/image1.jpg">
+
+<div class="wrapper">
+  <!-- <div class="advertisement">
+    <app-ad></app-ad>
+  </div> -->
+  <div class="main-container">
+    <app-commodities id="commodities"></app-commodities>
+    <app-orders id="orders"></app-orders>
+  </div>
+  <app-cart [userId]="userId" [phone]="phone"></app-cart>
+</div>
+
+<app-signin (onSignin)="eventHandler($event)"></app-signin>

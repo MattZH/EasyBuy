@@ -1,0 +1,29 @@
+<div class="ui segment orders-container">
+    <h4 class="ui header">Orders</h4>
+    <div class="ui one column grid">
+        <div class="column" *ngFor="let order of orders,let $order = order" (click)="selectOrder(order)">
+            <div class="ui segment information">
+                <h5>{{order.name}}</h5>
+                <h5>Total: ￥{{order.total}}</h5>
+                <button class="ui mini inverted red button" (click)="deleteOrder()">Delete</button>
+                <table class="ui very basic table">
+                    <thead>
+                        <tr>
+                            <th>Commidity Name</th>
+                            <th>Price</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of order.product">
+                            <td>{{product.name}}</td>
+                            <td>{{product.price}}</td>
+                            <td>{{product.count}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+  

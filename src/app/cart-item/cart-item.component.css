@@ -1,0 +1,9 @@
+.cart-item.cart-item1.cart-item2{
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-bottom:5px !important;
+    padding-top:5px;
+}
+.action{
+    float: right;
+}

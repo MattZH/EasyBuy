@@ -1,0 +1,23 @@
+<div class="ui grid commodities-container">
+  <div *ngFor="let commodity of commodities" (click)="addToCart(commodity)" class="commodity-item sixteen wide mobile eight wide tablet four wide computer column">
+    <div class="ui card">
+      <div class="image">
+        <img src="http://192.168.43.26:3000/{{commodity.picture}}">
+      </div>
+      <div class="content">
+        <a class="header">{{commodity.name}}</a>
+        <div class="description">
+          Price : ￥{{commodity.price}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui fluid teal hirizontal animated button" tabindex="0">
+          <div class="hidden content">Add to cart</div>
+          <div class="visible content">
+            <i class="shop icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

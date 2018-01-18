@@ -1,0 +1,6 @@
+.commodities-container{
+    padding:20px;
+}
+.commodity-item{
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.wrapper{
+    /*去除inline-block之间的间隙*/
+    font-size: 0;
+    -webkit-text-size-adjust:none;
+}
+ .advertisement, .main-container, .cart{
+    display: inline-block;
+    font-size: 12px;
+    vertical-align:top;
+}
+.advertisement{
+    width: 200px;
+}
+.main-container{
+    /* width: calc(100% - 200px); */
+    width: 100%;
+    margin-left:0 !important;
+    /* background-color:red; */
+}

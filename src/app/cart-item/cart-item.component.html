@@ -1,0 +1,21 @@
+<div class="ui items cart-item cart-item1 cart-item2">
+  <div class="item">
+    <div class="ui mini image">
+      <img src="http://192.168.43.26:3000/{{cartItem.picture}}">
+    </div>
+    <div class="content">
+      <div class="header">{{cartItem.name}}</div>
+      <div class="meta">
+        <span class="price">number：{{cartItem.count}}</span>
+        <div class="action">
+          <i class="add circle icon" (click)="addNumber()"></i>
+          <i class="minus circle icon" (click)="minusNumber()"></i>
+          <i class="remove circle icon" (click)="remove()"></i>
+        </div>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>

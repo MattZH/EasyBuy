@@ -1,0 +1,12 @@
+.ui.segment.orders-container{
+    margin: 20px;
+    padding: 20px;
+}
+.information h5{
+    display: inline;
+    vertical-align: top;
+    margin-right: 20px;
+}
+.information button {
+    margin-top: -5px;
+}

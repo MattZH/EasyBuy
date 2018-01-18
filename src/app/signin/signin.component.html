@@ -1,0 +1,16 @@
+<div class="ui mini modal signin-modal" [ngClass]="{'visible': isActive}">
+  <div class="header">请输入手机号</div>
+  <div class="content">
+    <form class="ui form">
+      <div class="field">
+        <input [(ngModel)]="phone" name="phone" placeholder="手机号"/>
+      </div>
+    </form>
+  </div>
+  <div class="actions">
+    <div class="ui teal ok button" (click)="signin()">
+      <i class="checkmark icon"></i>
+      登录
+    </div>
+  </div>
+</div>
