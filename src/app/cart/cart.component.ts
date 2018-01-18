@@ -1,9 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { CartItemComponent } from '../cart-item/cart-item.component'
 import { CartItem } from '../models/cart-item';
 import { Price } from '../models/price'
-import { ViewChild } from '../../../node_modules/_@angular_core@5.1.2@@angular/core/src/metadata/di';
 import { OrderService } from '../services/order.service';
 @Component({
   selector: 'app-cart',

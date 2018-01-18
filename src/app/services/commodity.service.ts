@@ -5,12 +5,13 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class CommodityService {
+  private commoditiesUrl = 'api/commoditites';  // URL to web api
 
   constructor(public httpClient: HttpClient) {
    
   }
   getCommodities(): Promise<Commodity[]> {
-    return this.httpClient.get('http://192.168.43.26:3000/v1/products?t='+ (new Date()).getTime().toString())
+    return this.httpClient.get(this.commoditiesUrl)
                .toPromise()
                .then(response => response as Commodity[])
                .catch(this.handleError);

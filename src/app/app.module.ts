@@ -4,6 +4,8 @@ import { FormsModule }   from '@angular/forms';
 import { NgSemanticModule } from "ng-semantic";
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './services/in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { AdComponent } from './ad/ad.component';
@@ -33,6 +35,7 @@ import { OrderService } from './services/order.service';
     FormsModule,
     HttpModule,
     HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService),
   ],
   providers: [CommodityService, CartService, OrderService],
   bootstrap: [AppComponent]

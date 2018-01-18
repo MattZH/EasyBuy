@@ -2,7 +2,7 @@
   <div *ngFor="let commodity of commodities" (click)="addToCart(commodity)" class="commodity-item sixteen wide mobile eight wide tablet four wide computer column">
     <div class="ui card">
       <div class="image">
-        <img src="http://192.168.43.26:3000/{{commodity.picture}}">
+        <img src="{{commodity.picture}}">
       </div>
       <div class="content">
         <a class="header">{{commodity.name}}</a>
